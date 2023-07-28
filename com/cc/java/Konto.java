@@ -1,8 +1,12 @@
 package com.cc.java;
 
 public class Konto {
-    
-    public int kontostand = 10000;
+
+    private int kontostand;
+
+    public Konto(int kontostand) {
+        this.kontostand = kontostand;
+    }
 
     public int getKontostand() {
         return kontostand;
@@ -11,4 +15,5 @@ public class Konto {
     public void setKontostand(int kontostand) {
         this.kontostand = kontostand;
     }
+
 }

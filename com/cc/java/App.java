@@ -5,15 +5,19 @@ public class App {
     public static void main(String[] args) {
     
         // Erzeugen von 3 Instanzen von Konto
-        Konto konto1 = new Konto();
-        Konto konto2 = new Konto();
-        Konto konto3 = new Konto();
+        Konto konto1 = new Konto(10000);
+        Konto konto2 = new Konto(10000);
+        Konto konto3 = new Konto(10000);
 
 
         // Ausgabe des Anfangskontostands
-        output(konto1.kontostand);
-        output(konto2.kontostand);
-        output(konto3.kontostand);
+        output("Konto1: " + konto1.getKontostand());
+        output("Konto2: " + konto2.getKontostand());
+        output("Konto3: " + konto3.getKontostand());
+
+
+
+        output("------------------------");
 
 
         // Ändern der Kontostände
@@ -22,13 +26,13 @@ public class App {
         konto3.setKontostand(konto3.getKontostand() * 10);
 
         // Ausgabe der aktuellen Kontostände
-        output(konto1.getKontostand());
-        output(konto2.getKontostand());
-        output(konto3.getKontostand());
+        output("Konto1: " + konto1.getKontostand());
+        output("Konto2: " + konto2.getKontostand());
+        output("Konto3: " + konto3.getKontostand());
        }
 
 
-    private static void output(int outputStr) {
+    private static void output(String outputStr) {
         System.out.println(outputStr);
     } 
 
